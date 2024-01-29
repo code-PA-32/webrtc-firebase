@@ -11,15 +11,18 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.2.9",
+    "@tanstack/react-router": "^1.14.6",
     "firebase": "^10.7.2",
     "framer-motion": "^10.18.0",
     "happy-dom": "^13.3.2",
     "lucide-react": "^0.314.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.2.1",
     "zustand": "^4.5.0"
   },
   "devDependencies": {
+    "@tanstack/router-vite-plugin": "^1.14.1",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",

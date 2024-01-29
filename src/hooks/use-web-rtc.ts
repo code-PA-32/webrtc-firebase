@@ -1,7 +1,7 @@
 import type { HTMLVideoElement } from "happy-dom"
 
 import { useMeetStore } from "../store/meet-store.ts"
-import { database } from "../utils/index.tsx"
+import { database } from '../utils'
 
 const servers = {
   iceServers: [

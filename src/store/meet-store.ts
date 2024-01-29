@@ -1,6 +1,6 @@
 import { create } from "zustand"
 
- interface MeetState {
+export interface MeetState {
   meetId: string
   isMicOn: boolean
   isCameraOn: boolean
@@ -14,7 +14,7 @@ import { create } from "zustand"
   remoteStream: MediaStream | null
 }
 
- interface MeetStoreState {
+export interface MeetStoreState {
   state: MeetState
   updateMeetState: (data: Partial<MeetState>) => void
   clearMeeting: () => void
