@@ -53,6 +53,13 @@ export const OnCall = () => {
   const hangUpHandler = () => {
     updateMeetState({
       isCallActive: false,
+      isWaiting: false,
+      isHost: false,
+      isOnHold: false,
+      isCameraOn: false,
+      isMicOn: false,
+      isPresenting: false,
+      isFullScreen: false,
     })
     closeMeeting()
     void navigate({ to: '/' })
