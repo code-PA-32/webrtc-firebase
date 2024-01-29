@@ -5,7 +5,9 @@
 <h1 style="color:red; text-align: center">WebRTC video chat app</h1>
 
 ## 📝 About the project
-Simple 1-on-1 video chat with screen share app using WebRTC and Firebase.
+Simple 1-on-1 video chat with screen share app using pure WebRTC API and Firebase.
+
+[#Demo here!](https://webrtc-firebase.vercel.app/)
 
 ## To Setup
 - Clone the repo
