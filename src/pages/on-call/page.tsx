@@ -4,7 +4,7 @@ import { useMeetStore } from '../../store/meet-store.ts'
 import { closeMeeting, useWebRTC } from '../../hooks/use-web-rtc.ts'
 import { twMerge } from 'tailwind-merge'
 import { OnCallControls } from './components/on-call-controls.tsx'
-
+import {Snippet} from "@nextui-org/react";
 
 export const OnCall = () => {
   const videoContainerRef = useRef<HTMLDivElement | null>(null)
@@ -14,7 +14,7 @@ export const OnCall = () => {
   const screenShareRef = useRef<HTMLVideoElement | null>(null)
   const { shareScreen } = useWebRTC()
   const navigate = useNavigate()
-
+const callId = state.meetId
   useEffect(() => {
     if (remoteVideoRef.current) {
       remoteVideoRef.current.srcObject = state.remoteStream
@@ -74,6 +74,9 @@ export const OnCall = () => {
   return (
     <div
       className="flex w-full flex-col flex-wrap items-center justify-between lg:flex-row lg:gap-0">
+      <div className="absolute right-0 z-10 top-0">
+        <Snippet symbol="Copy call ID" color="danger" variant="solid">{callId}</Snippet>
+      </div>
       <div className="h-screen w-full">
         <div className="relative flex 2xl:justify-center" ref={videoContainerRef}>
           <video
